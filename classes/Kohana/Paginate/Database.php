@@ -79,7 +79,7 @@ class Kohana_Paginate_Database extends Paginate
 
 		if (count($columns) > 0)
 		{
-			$query = '%' . Database::instance()->escapes($query) . '%';
+			$query = '%' . Database::instance()->escape($query) . '%';
 			
 			$this->_object->where_open();
 			$this->_object_search_clone->where_open();
